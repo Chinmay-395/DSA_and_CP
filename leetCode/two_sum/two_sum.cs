@@ -1,0 +1,1 @@
+// A hashmap is a key-value data-structure which is provided in the generics library of c#
