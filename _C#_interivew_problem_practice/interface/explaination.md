@@ -1,3 +1,5 @@
+# Interface
+
 What is an interface?
 
 ```
@@ -20,4 +22,16 @@ What is an interface?
     🟩 we cannot create an instance of an Interface, but an interface refernce variable can point
         to a derived class object.
     [chained_inheritance.cs covers the above 3 points]
+```
+
+Explicit interfaces implementation
+
+```
+If there are two interfaces with the same signature, same properties, same methods
+and a class is inheriting those two interfaces then, which interface should be invoked becomes uncertain.
+Solution-1:
+    Typecast the object that is being declared to the desired interface.
+Solution-2:
+    Explicit interface implementation
+
 ```
