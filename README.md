@@ -1,10 +1,12 @@
 # Interview prep
 
+```
 This resides the solutions of leetcode problems and CTCI problems written in JS/C#/Python language
 It also encompasis the interview questions for
 🟢 C#/dotnet interview questions
 🟢 JS/nodejs interview questions
 🟢 System design interview practice
+```
 
 ### Resources
 
@@ -15,7 +17,10 @@ It also encompasis the interview questions for
 #### commands to use for vscode
 
 ```
-1) to run a c# file
+1) Create a solution file
+2) Create a console app
+3) add all the .csproj files regarding one solution if you want those solutions to be together
+4) to run a c# file
 dotnet run <file-name>
 ```
 
