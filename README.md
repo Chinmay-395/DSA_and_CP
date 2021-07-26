@@ -8,20 +8,13 @@ It also encompasis the interview questions for
 🟢 System design interview practice
 ```
 
+## Time Complexity
+
+resources:-
+
+• [recusive functions](https://stackoverflow.com/questions/13467674/determining-complexity-for-recursive-functions-big-o-notation)
+
 ### Resources
 
 1. dotnet CLI ---> `https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new`
 2. C# documentation: `https://docs.microsoft.com/en-us/dotnet/csharp/`
-3.
-
-#### commands to use for vscode
-
-```
-1) Create a solution file
-2) Create a console app
-3) add all the .csproj files regarding one solution if you want those solutions to be together
-4) to run a c# file
-dotnet run <file-name>
-```
-
-🟩 Last read page from CTCI ---> 90
