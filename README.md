@@ -32,8 +32,7 @@ resources:-
 
 ### Grant-Chart
   
- ```html
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,4 +43,4 @@ resources:-
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 </body>
 </html>
- ```
+ 
