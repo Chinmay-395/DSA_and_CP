@@ -1,3 +1,6 @@
+# index 
+
+## The template cpp file for codeforces
 ```cpp
 // The base template c++ code
 #include <bits/stdc++.h>
@@ -42,3 +45,85 @@ int main() {
     }
 }
 ```
+
+## The template cpp file for leetcode
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+// ------ The code from leetcode ----
+
+// ------ ------------------------ ----
+int main()
+{
+    Solution sol;
+    
+    return -1;
+}
+```
+
+## Code snippets
+
+*To find duplicates present in a vector,*
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <set>
+ 
+template<typename T>
+std::set<T> findDuplicates(std::vector<T> vec)        // no-ref, no-const
+{
+    std::set<int> duplicates;
+    std::sort(vec.begin(), vec.end());
+    std::set<int> distinct(vec.begin(), vec.end());
+    std::set_difference(vec.begin(), vec.end(), distinct.begin(), distinct.end(),
+        std::inserter(duplicates, duplicates.end()));
+    return duplicates;
+}
+ 
+int main()
+{
+    std::vector<int> vec = {2, 2, 4, 1, 3, 6, 6, 7, 6, 8};
+ 
+    std::set<int> duplicates = findDuplicates(vec);
+    for (auto &i: duplicates) {
+        std::cout << i << ' ';
+    }
+ 
+    return 0;
+}
+```
+
+# Algorithms
+
+## minimum spanning tree
+
+1. Kruskal's algorithm✅
+2. Prim jarniks algorithm✅
+3. Baruvka's algorithm
+4. 
+
+# DP problems
+
+1. 70 climbing stair (leetcode)
+2. 746 min cost climbing stairs (leetcode)
+3. 1137 Nth tri-bonacci number (leetcode)
+4. 2244 minimum round (leetcode)
+
+## Array
+
+1. Hit lottery (CF)
+2. Fair division (CF)
+
+## strings
+
+## Linked-list
+
+## Trees
+
+## Graph
+
+
+
+## Bitwise operations
