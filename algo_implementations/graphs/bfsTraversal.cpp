@@ -4,30 +4,35 @@ using namespace std;
 class Solution
 {
 public:
+	//BFS traversal
+	/*
+	visited array
+	answer to store the traversal
+	queue data structure 
+	adjeceny matrix 
+	*/
+	
     vector<int> bfsOfGraph(int V, vector<int> adj[])
     {
-        vector<int> bfs;
-        vector<int> vis(V, 0);
+        vector<int> visited(V,-1);
+        vector<int> ans;
         queue<int> q;
         q.push(0);
-        vis[0] = 1;
-        while (!q.empty())
-        {
-            int node = q.front();
-            q.pop();
-            bfs.push_back(node);
+        //visited[0]=0;
+        while(!q.empty()){
+        	int node = q.front();
+        	q.pop();
+        	ans.push_back(node);
+        	for(auto x: adj[node]){
+		      	if(visited[x]==-1){
+		      		visited[x]=0;
+		      		q.push(x);
+		      	}
+        	}
+        	visited[node]=0;
 
-            for (auto it : adj[node])
-            {
-                if (!vis[it])
-                {
-                    q.push(it);
-                    vis[it] = 1;
-                }
-            }
         }
-
-        return bfs;
+        return ans;
     }
 };
 
@@ -43,6 +48,7 @@ void printAns(vector<int> &ans)
     {
         cout << ans[i] << " ";
     }
+    cout << endl;
 }
 int main()
 {
@@ -56,7 +62,7 @@ int main()
     Solution obj;
     vector<int> ans = obj.bfsOfGraph(5, adj);
     printAns(ans);
-    cout << endl;
+
 
     return 0;
 }
