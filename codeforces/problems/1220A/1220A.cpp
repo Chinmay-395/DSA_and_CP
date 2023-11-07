@@ -142,8 +142,11 @@ int main()
     cout.tie(0);
 
     // Redirect input and output
+
+#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
+#endif
 
     int tc = 1;
     cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
@@ -154,7 +157,7 @@ int main()
     }
 
     // Close files
-    // fclose(stdin);
-    // fclose(stdout);
+    fclose(stdin);
+    fclose(stdout);
     return 0;
 }

@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
-#include <iostream>
-using namespace std;
 
-// ... [Keep all your other definitions and debug template here] ...
+using namespace std;
 
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
@@ -39,37 +37,41 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 /*
-Like: sanFran --> seattle
-knows for the last n days which offce, not at the same office for the same day
+Ehab chooses a number the number
 
+starting from Mahmoud
+    Mahmoud --> 'a' has to be even --> -2
+    Ehab --> 'a' has to be odd --> -1
 
+    for example
+    5
+    M -> 3
+    E -> 2
+    M -> 0
 */
-
 void solve()
 {
     int n;
-    string s;
-    cin >> n;
-    cin >> s;
-    int count_s_f = 0, count_f_s = 0;
-    for (int i = 1; i < n; i++)
+    cin >> n; // ehab num
+    bool mahmoud = true;
+    while (n >= 1)
     {
-        if (s[i - 1] == 'S' && s[i] == 'F')
+        if (mahmoud)
         {
-            count_s_f++;
+            n = n - 2;
         }
-        if (s[i - 1] == 'F' && s[i] == 'S')
+        else
         {
-            count_f_s++;
+            n = n - 1;
         }
     }
-    if (count_s_f > count_f_s)
+    if (!mahmoud)
     {
-        cout << "YES" << endl;
+        cout << "Ehab";
     }
     else
     {
-        cout << "NO" << endl;
+        cout << "Mahmoud";
     }
 }
 
@@ -79,22 +81,25 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    // Redirect input and output
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
+    // #ifndef ONLINE_JUDGE
+    //     freopen("input.txt", "r", stdin);
+    //     freopen("output.txt", "w", stdout);
+    // #endif
+    //     int tc = 1;
+    //     // cin >> tc;
+    //     for (int t = 1; t <= tc; t++)
+    //     {
+    //         // cout << "Case #" << t << ": ";
+    //         solve();
+    //     }
+    //     // Close files
+    //     fclose(stdin);
+    //     fclose(stdout);
+    int n;
+    cin >> n; // ehab num
 
-    int tc = 1;
-    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
-    for (int t = 1; t <= tc; t++)
-    {
-        // cout << "Case #" << t << ": "; // Uncomment if you need case numbering
-        solve();
-    }
-
-    // Close files
-    fclose(stdin);
-    fclose(stdout);
-    return 0;
+    if (n % 2)
+        printf("Ehab");
+    else
+        printf("Mahmoud");
 }
