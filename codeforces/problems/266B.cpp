@@ -40,6 +40,46 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    /*
+    BGGBG
+
+    GBGGB
+
+    BGGBG t=2
+    GGBGB
+----
+    BGGBG t=3
+    GGBGB
+    GGGBB
+----
+    BGGBG t=3
+    stack (n=5)
+    i=5: G
+    i=4: GB
+    i=3: G-> GGB
+    i=4
+
+
+    */
+    int n, t;
+    cin >> n;
+    cin >> t;
+    string s;
+    cin >> s;
+    while (t)
+    {
+        for (int i = 1; i < n; i++)
+        {
+            if (s[i] == 'G' && s[i - 1] == 'B')
+            {
+                s[i - 1] = 'G';
+                s[i] = 'B';
+                i++;
+            }
+        }
+        t--;
+    }
+    cout << s << endl;
 }
 
 int main()
@@ -51,12 +91,12 @@ int main()
     // Redirect input and output
 
 #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("/home/chinmay/Coding/DSA_and_CP/codeforces/problems/input.txt", "r", stdin);
+    freopen("/home/chinmay/Coding/DSA_and_CP/codeforces/problems/output.txt", "w", stdout);
 #endif
 
-    int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    int tc = 3;
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering
