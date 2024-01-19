@@ -136,7 +136,3 @@ int main()
 ## Graph
 
 ## Bitwise operations
-
-```
-I'm looking for a great, enthusiactic, engineering team to work for that will provide me with challenging, interesting work that I can learn from and contribute to.
-```
