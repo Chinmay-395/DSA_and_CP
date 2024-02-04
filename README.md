@@ -115,12 +115,12 @@ int main()
 3. Baruvka's algorithm
 4.
 
-# DP problems
+# DP Types
 
-1. 70 climbing stair (leetcode)
-2. 746 min cost climbing stairs (leetcode)
-3. 1137 Nth tri-bonacci number (leetcode)
-4. 2244 minimum round (leetcode)
+1. pick/skip
+2. DFS (for matrix problems)
+3. Matrix Chain Multiplication
+4. Left & Right DP
 
 ## Array
 

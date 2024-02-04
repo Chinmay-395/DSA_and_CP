@@ -1,8 +1,8 @@
 https://leetcode.com/problems/flip-game-ii✅
-https://leetcode.com/problems/android-unlock-patterns
-https://leetcode.com/problems/uncrossed-lines
-https://leetcode.com/problems/minimum-cost-for-tickets
-https://leetcode.com/problems/maximum-number-of-points-with-cost
+https://leetcode.com/problems/android-unlock-patterns✅
+https://leetcode.com/problems/uncrossed-lines✅
+https://leetcode.com/problems/minimum-cost-for-tickets✅
+https://leetcode.com/problems/maximum-number-of-points-with-cost✅
 https://leetcode.com/problems/count-submatrices-with-all-ones
 https://leetcode.com/problems/count-ways-to-build-good-strings
 https://leetcode.com/problems/longest-arithmetic-subsequence
