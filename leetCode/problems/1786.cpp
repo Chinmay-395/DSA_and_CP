@@ -4,7 +4,7 @@ using namespace std;
 class Solution
 {
 public:
-    vector<int> dijkstra(int V, vector<pair<int, int>> adj[], int S)
+    vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
         // Create a set ds for storing the nodes as a pair {dist,node}
         // where dist is the distance from source to the node.
@@ -34,8 +34,8 @@ public:
             // element whether the prev dist is larger than current or not.
             for (auto it : adj[node])
             {
-                int adjNode = it.first;
-                int edgW = it.second;
+                int adjNode = it[0];
+                int edgW = it[1];
 
                 if (dis + edgW < dist[adjNode])
                 {
@@ -55,32 +55,32 @@ public:
         // from source to all the nodes.
         return dist;
     }
-    vector<int> bfsOfGraph(int V, vector<pair<int, int>> adj[], vector<int> res, int count)
+    vector<int> bfsOfGraph(int V, vector<vector<int>> adj[], vector<int> res, int count)
     {
-        // int vis[V] = {0};
-        vector<int> vis(V, 0);
+        int vis[V] = {0};
         vis[0] = 1;
-        queue<pair<int, int>> q;
+        queue<int> q;
         // push the initial starting node
-        q.push({0, 0});
+        q.push(0);
         vector<int> bfs;
         // iterate till the queue is empty
         while (!q.empty())
         {
             // get the topmost element in the queue
-            auto node = q.front();
+            int node = q.front();
             q.pop();
-            bfs.push_back(node.first);
+            bfs.push_back(node);
             // traverse for all its neighbours
-            for (auto it : adj[node.first])
+            for (auto it : adj[node])
             {
+                int adjNode = it[0];
+
                 // if the neighbour has previously not been visited,
                 // store in Q and mark as visited
-                if (!vis[it.first] && res[node.first] > res[it.first])
+                if (!vis[adjNode] && res[node] > res[adjNode])
                 {
-                    vis[it.first] = 1;
-                    count++;
-                    q.push(it);
+                    vis[adjNode] = 1;
+                    q.push(adjNode);
                 }
             }
         }
@@ -104,7 +104,7 @@ public:
 
         TC: O(V) x O( E log(V) ) + O(V)
         */
-        vector<pair<int, int>> adj[n];
+        vector<vector<int>> adj[n];
         for (auto edge : edges)
         {
             // Assuming edge[0] is the source, edge[1] is the destination, and edge[2] is the weight

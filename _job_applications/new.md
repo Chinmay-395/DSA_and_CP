@@ -1,0 +1,10 @@
+NOT ("SimplyApply"
+NOT "ClickJobs.io"
+NOT "Hexaware Technologies"
+NOT "Energy Jobline"
+NOT "Dice"
+NOT "Capital One "
+NOT "Diverse Lynx"
+NOT "Patterned Learning Career"
+NOT "RemoteWorker US"
+NOT "HireMeFast LLC")
