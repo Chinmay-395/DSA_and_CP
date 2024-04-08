@@ -105,34 +105,3 @@ int main()
     return 0;
 }
 ```
-
-# Algorithms
-
-## minimum spanning tree
-
-1. Kruskal's algorithm✅
-2. Prim jarniks algorithm✅
-3. Baruvka's algorithm
-4.
-
-# DP Types
-
-1. pick/skip
-2. DFS (for matrix problems)
-3. Matrix Chain Multiplication
-4. Left & Right DP
-
-## Array
-
-1. Hit lottery (CF)
-2. Fair division (CF)
-
-## strings
-
-## Linked-list
-
-## Trees
-
-## Graph
-
-## Bitwise operations
