@@ -40,6 +40,31 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    /*
+    k:charge=3 n:dollars=17 w:banaa=4
+
+    3,6,9,12
+    18+12 = 30 - 17
+    */
+
+    int k, n, w;
+    cin >> k;
+    cin >> n;
+    cin >> w;
+    // printf("K: %d n: %d w:%d", k, n, w);
+    int ans = 0, cost = 0;
+    for (int i = 1; i <= w; i++)
+    {
+        cost += k * i;
+    }
+    if (n >= cost)
+    {
+        cout << 0 << endl;
+    }
+    else
+    {
+        cout << cost - n << endl;
+    }
 }
 
 int main()
@@ -56,7 +81,7 @@ int main()
 #endif
 
     int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering

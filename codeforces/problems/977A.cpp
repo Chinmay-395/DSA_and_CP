@@ -1,3 +1,4 @@
+
 // The base template c++ code
 #include <bits/stdc++.h>
 #include <iostream>
@@ -40,6 +41,22 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    int n, k;
+    cin >> n >> k;
+
+    while (k)
+    {
+        if (n % 10 == 0)
+        {
+            n = n / 10;
+        }
+        else
+        {
+            n--;
+        }
+        k--;
+    }
+    cout << n << endl;
 }
 
 int main()
@@ -56,7 +73,7 @@ int main()
 #endif
 
     int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering

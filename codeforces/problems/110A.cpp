@@ -40,6 +40,24 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    string s;
+    cin >> s;
+    int count = 0;
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (s[i] == '4' || s[i] == '7')
+        {
+            count++;
+        }
+    }
+    if (count == 4 || count == 7)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
 }
 
 int main()
@@ -56,7 +74,7 @@ int main()
 #endif
 
     int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering

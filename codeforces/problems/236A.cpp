@@ -40,6 +40,17 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    string s;
+    cin >> s;
+    set<char> s_set(s.begin(), s.end());
+    if (s_set.size() % 2 == 0)
+    {
+        cout << "CHAT WITH HER!" << endl;
+    }
+    else
+    {
+        cout << "IGNORE HIM!" << endl;
+    }
 }
 
 int main()
@@ -56,7 +67,7 @@ int main()
 #endif
 
     int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering

@@ -40,6 +40,39 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    /*
+    2 3 4 1
+    1 2 3 4
+
+    4 1 2 3
+
+    1 3 2
+    1 2 3
+
+    1 3 2
+
+
+    1 2
+    1 2
+    1 2
+
+    */
+
+    int n;
+    cin >> n;
+    vector<pair<int, int>> vp;
+    for (int i = 0; i < n; i++)
+    {
+        int val;
+        cin >> val;
+        vp.push_back(make_pair(val, i));
+    }
+    sort(vp.begin(), vp.end());
+    for (auto x : vp)
+    {
+        cout << x.second + 1 << " ";
+    }
+    cout << endl;
 }
 
 int main()
@@ -56,7 +89,7 @@ int main()
 #endif
 
     int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering

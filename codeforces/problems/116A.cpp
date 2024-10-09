@@ -40,6 +40,22 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    int n;
+    cin >> n;
+    cout << n;
+    int remaining = 0;
+    int incoming, outgoing;
+    int maxVal = INT_MIN;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> outgoing;
+        cin >> incoming;
+        remaining = remaining - outgoing + incoming;
+        maxVal = max(maxVal, remaining);
+    }
+    printf("%d", maxVal);
+    // cout << maxVal << endl;
+    // return 0;
 }
 
 int main()
@@ -56,7 +72,7 @@ int main()
 #endif
 
     int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering
@@ -68,3 +84,9 @@ int main()
     fclose(stdout);
     return 0;
 }
+
+/*
+0 - 0 +3 = 3
+3 - 2 + 5 = 6
+6 - 4 + 2 = 4
+*/

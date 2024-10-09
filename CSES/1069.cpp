@@ -40,6 +40,26 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    string s;
+    cin >> s;
+    char prev = s[0];
+    int count = 1, max_count = INT_MIN;
+    for (int i = 1; i < s.size(); i++)
+    {
+
+        if (s[i - 1] == s[i])
+        {
+            count++;
+        }
+        else
+        {
+            max_count = max(count, max_count);
+            // prev = s[i];
+            count = 1;
+        }
+        }
+    max_count = max(count, max_count);
+    cout << max_count << endl;
 }
 
 int main()
@@ -56,7 +76,7 @@ int main()
 #endif
 
     int tc = 1;
-    cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
+    // cin >> tc; // Uncomment if the first line of the input specifies the number of test cases
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": "; // Uncomment if you need case numbering
